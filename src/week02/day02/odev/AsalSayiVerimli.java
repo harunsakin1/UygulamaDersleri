@@ -5,8 +5,7 @@ public class AsalSayiVerimli {
 	public static void main(String[] args) {
 		 Scanner sc = new Scanner(System.in);
 		int sayi, i;
-		boolean asalMi;
-		asalMi = true;
+		boolean asalMi=true;
 		System.out.println("Bir sayi giriniz: ");
 		sayi = sc.nextInt();
 		double baslangic=System.currentTimeMillis();
