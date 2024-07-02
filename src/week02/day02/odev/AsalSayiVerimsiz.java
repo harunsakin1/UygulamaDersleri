@@ -32,7 +32,7 @@ public class AsalSayiVerimsiz {
 				}
 			}
 			double bitis=System.currentTimeMillis();
-			System.out.println("Islem "+((bitis-baslangic)/1000)+" saniye surdu");
+			System.out.println("Islem "+((bitis-baslangic)/1000)        +" saniye surdu");
 		
 	}
 }
