@@ -7,7 +7,7 @@ Islemleri baslatmadan once bu methodu baslangic adli degiskene atadim, islemler 
 atadim. Daha sonra da bitis süresinden baslangic süresini cikartarak sonucu milisaniye cinsinden elde ettim ve saniyeye
 çevirdim.
 
-En verimsiz versiyon, asal sayi olarak "1000000007" sayisini girdigimde islemleri ortalama 3.6 saniyede bitirirken, en
-verimli versiyon ise bu islemleri yaklasik 0.005 saniyede gerceklestiriyor. Bu da en verimli versiyonun en verimsiz
-versiyondan yaklasik olarak 720 kat daha hizli oldugunu gösteriyor. Orta verimli versiyon ise bu iki versiyonun arasinda
-0.950-1 saniye civarinda tum islemleri bitiriyor.
+En verimsiz versiyon, asal sayi olarak -integer'in alabilecegi en buyuk deger olan- "2147483647" sayisini girdigimde
+islemleri ortalama 7.8 saniyede bitirirken, enverimli versiyon ise bu islemleri yaklasik 0.004 saniyede gerceklestiriyor.
+Bu da en verimli versiyonun en verimsiz versiyondan yaklasik olarak 1950 kat daha hizli oldugunu gösteriyor.
+Orta verimli versiyon ise bu iki versiyonun arasinda 1.950-2 saniye civarinda tum islemleri bitiriyor.
