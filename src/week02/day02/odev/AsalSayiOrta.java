@@ -14,7 +14,7 @@ public class AsalSayiOrta {
 		if (sayi <= 1 || sayi % 2 == 0 && sayi != 2) {
 			System.out.println("Girdiginiz " + sayi + " sayisi asal degildir.");
 		} else if (sayi == 2) {
-				System.out.println("Girdiginiz " + sayi + " sayisi asald?r.");
+				System.out.println("Girdiginiz " + sayi + " sayisi asaldir.");
 			} else {
 				for (i = 3; i <= sayi/2; i+=2) {
 					if (sayi % i == 0) {
