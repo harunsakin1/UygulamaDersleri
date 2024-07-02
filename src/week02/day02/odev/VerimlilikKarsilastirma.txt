@@ -1,0 +1,13 @@
+
+3 farkli versiyonunu yazdigim asal sayi bulma kodlarinda ilk bakista cok büyük farkliliklar gozukmese de dongu
+icerisinde yaptigim matematiksel degisiklikler ile verimlilik cok degiskenlik gosteriyor.
+
+Oncelikle islemin kac saniye surdugunu ogrenmek icin "System.currentTimeMillis()" methodunu kullandim.
+Islemleri baslatmadan once bu methodu baslangic adli degiskene atadim, islemler bittikten sonra ise bitis adli degiskene
+atadim. Daha sonra da bitis süresinden baslangic süresini cikartarak sonucu milisaniye cinsinden elde ettim ve saniyeye
+çevirdim.
+
+En verimsiz versiyon, asal sayi olarak "1000000007" sayisini girdigimde islemleri ortalama 3.6 saniyede bitirirken, en
+verimli versiyon ise bu islemleri yaklasik 0.005 saniyede gerceklestiriyor. Bu da en verimli versiyonun en verimsiz
+versiyondan yaklasik olara 720 kat daha hizli oldugunu gösteriyor. Orta verimli versiyon ise bu iki versiyonun arasinda
+0.950-1 saniye civarinda tum islemleri bitiriyor.
