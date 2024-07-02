@@ -9,5 +9,5 @@ atadim. Daha sonra da bitis süresinden baslangic süresini cikartarak sonucu mi
 
 En verimsiz versiyon, asal sayi olarak "1000000007" sayisini girdigimde islemleri ortalama 3.6 saniyede bitirirken, en
 verimli versiyon ise bu islemleri yaklasik 0.005 saniyede gerceklestiriyor. Bu da en verimli versiyonun en verimsiz
-versiyondan yaklasik olara 720 kat daha hizli oldugunu gösteriyor. Orta verimli versiyon ise bu iki versiyonun arasinda
+versiyondan yaklasik olarak 720 kat daha hizli oldugunu gösteriyor. Orta verimli versiyon ise bu iki versiyonun arasinda
 0.950-1 saniye civarinda tum islemleri bitiriyor.
