@@ -6,10 +6,10 @@ import java.util.Scanner;
 public class AsalSayiVerimli {
 	public static void main(String[] args) {
 		 Scanner sc = new Scanner(System.in);
-		int sayi, i;
+		long sayi, i;
 		boolean asalMi=true;
 		System.out.println("Bir sayi giriniz: ");
-		sayi = sc.nextInt();
+		sayi = sc.nextLong();
 		sc.close();
 		double baslangic=System.currentTimeMillis();
 		if (sayi <= 1 || sayi % 2 == 0 && sayi != 2) {
