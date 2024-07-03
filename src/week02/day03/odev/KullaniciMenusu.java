@@ -10,8 +10,8 @@ public class KullaniciMenusu {
 		int dilSecimi = sc.nextInt();
 		int menuSecim;
 		if (dilSecimi == 1) {
-			System.out.println("0 -- Cikis Yap\n1 -- Merhaba Dunya yazdir\n2 -- " + "Factorial calculation\n3 -- " +
-					                   "Prime number check");
+			System.out.println("0 -- Cikis Yap\n1 -- Merhaba Dunya yazdir\n2 -- " + "Faktoriyel hesaplama\n3 -- " +
+					                   "Asal sayi kontrolu");
 			menuSecim = -1;
 			while (menuSecim != 0) {
 				System.out.println("Lutfen bir secim yapiniz.");
@@ -32,7 +32,7 @@ public class KullaniciMenusu {
 				else if (menuSecim == 3) {
 					long sayi, i;
 					boolean asalMi = true;
-					System.out.println("Bir sayi giriniz : ");
+					System.out.print("Bir sayi giriniz : ");
 					sayi = sc.nextLong();
 					if (sayi <= 1 || sayi % 2 == 0 && sayi != 2) {
 						System.out.println(sayi + " sayisi asal sayi degildir.");
@@ -83,7 +83,7 @@ public class KullaniciMenusu {
 				else if (menuSecim == 3) {
 					long sayi, i;
 					boolean asalMi = true;
-					System.out.println("Enter a number : ");
+					System.out.print("Enter a number : ");
 					sayi = sc.nextLong();
 					if (sayi <= 1 || sayi % 2 == 0 && sayi != 2) {
 						System.out.println(sayi + " is not a prime number.");
