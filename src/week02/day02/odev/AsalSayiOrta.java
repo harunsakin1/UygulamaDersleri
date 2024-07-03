@@ -11,6 +11,7 @@ public class AsalSayiOrta {
 		boolean asalMi=true;
 		System.out.println("Bir sayi giriniz: ");
 		sayi = sc.nextInt();
+		sc.close();
 		double baslangic=System.currentTimeMillis();
 		if (sayi <= 1 || sayi % 2 == 0 && sayi != 2) {
 			System.out.println(sayi + " sayisi asal degildir.");
