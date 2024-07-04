@@ -10,10 +10,10 @@ public class KullaniciMenusu {
 		int dilSecimi = sc.nextInt();
 		int menuSecim;
 		if (dilSecimi == 1) {
-			System.out.println("0 -- Cikis Yap\n1 -- Merhaba Dunya yazdir\n2 -- " + "Faktoriyel hesaplama\n3 -- " +
-					                   "Asal sayi kontrolu");
 			menuSecim = -1;
 			while (menuSecim != 0) {
+				System.out.println("0 -- Cikis Yap\n1 -- Merhaba Dunya yazdir\n2 -- " + "Faktoriyel hesaplama\n3 -- " +
+						                   "Asal sayi kontrolu");
 				System.out.println("Lutfen bir secim yapiniz.");
 				menuSecim = sc.nextInt();
 				if (menuSecim == 1) {
@@ -62,9 +62,9 @@ public class KullaniciMenusu {
 			}
 		}
 		else if (dilSecimi == 2) {
-			System.out.println("0 -- Log Out\n1 -- Print Hello World\n2 -- Factorial calculation\n3 -- Prime number " + "check");
 			menuSecim = -1;
 			while (menuSecim != 0) {
+				System.out.println("0 -- Log Out\n1 -- Print Hello World\n2 -- Factorial calculation\n3 -- Prime number " + "check");
 				System.out.println("Please make a choose.");
 				menuSecim = sc.nextInt();
 				if (menuSecim == 1) {
