@@ -1,0 +1,108 @@
+##2.Hafta 1.Gün##
+--> De?i?ken ?simlendirme :
+-- De?i?ken isimlendirirken e?er de?i?kenin ismi bir kelimeden fazla ise aralar?nda bo?luk olmaz. Alt çizgi olabilir ya da camelCase denilen de?i?ken isimlendirme yöntemi kullan?labilir. camelCase denilen yap? da ?öyledir : 1.kelimenin tüm harfleri küçük sonra gelen her kelimenin ilk harfi büyük olacak ?ekilde yaz?l?r.
+
+-- De?i?ken isimlendirmede ilk karakter _, $,£(gibi para sembolleri) bu iki özel karakter d???nda hiçbir özel karakterle ba?layamaz. Ayr?ca rakam ile de ba?layamaz. Ya harf ile ba?layacak ya da _ veya $ sembolü ile ba?layacak.
+
+--> Veri Tipleri :
+-- Tam Say? De?erleri (Bit sayisina göre büyükten küçü?e) : Long(64 bit), int(32 bit), short(16 bit), byte(8 bit).
+-- Ondal?kl? Say? De?erleri : Double(64 bit), Float(32 bit).
+-- Metinsel ifadeler : String--> ?çerisine bir paragraf da yaz?labilir bir kelime de yaz?labilir. Her türlü metinsel ifadeyi içerisinde tutar. Çift t?rnak ile kullan?l?r.
+                       Char--> ?çerisinde tek bir karakter tutabilir. Tek t?rnak ile kullan?l?r. Fakat içerisine say? da girilebilir. ?çerisine girilen say?y? ASCII tablosundaki de?erini de içerisinde tutabilir.
+                       Örne?in char ch=65 dedi?imizde bize ç?kt? olarak A harfini verecektir.
+--Boolean Veri Tipi : ?çerisinde sadece true ya da false tutabilir. Bir ko?ulun do?ru ya da yanl?? oldu?unu sorgulamada kullan?l?r. Mesela  boolean sayiKarsilastir=10>5; ifadesini yazd?ktan sonra sayiKarsilastir de?i?keninin içerisinde art?k true de?eri olur.
+---NOT---
+Float tan?mlarken say?y? belirttikten sonra sonuna bir de f harfi koyulur. Aksi takdirde derleyici say?y? double olarak alg?lar.
+Long tan?mlarken ise say? e?er longdan bir küçük olan integer'?n de?er aral???n? a??yorsa long tan?mlanan say?n?n sonuna L harfi koyulmal?d?r yoksa derleyici hata verir.
+
+
+-->Sabit Tan?mlama :
+-- Sabit tan?mlarken normal de?i?ken tan?ml?yormu? gibi tan?ml?yoruz fakat ba??na final ifadesi koyuyoruz. Sabit olarak tan?mlad???m?z ?eylerin de?eri bir kere tan?mland?ktan sonra bir daha de?i?emez. Genelde sabit olarak tan?mlanan ?eylerin isimlerinin tüm harfleri büyük olur ve birden fazla kelime varsa _ ile ayr?l?r.
+--Örnek: final double PI=3.14;
+
+--> Tip Dönü?ümleri : ?ki çe?it tip dönü?ümü vard?r. Implicit ve Explicit.
+-- Implicit tip dönü?ümü otomatik dönü?üm sa?lar. Yani daha dü?ük veri türünü daha yüksek veri türüne direkt dönü?türür.
+Örne?in byte x=20; short y=x; yaparsak y'nin de?eri 20 olur. Hiçbir casting i?lemi yapmam?za gerek yoktur.
+(byte->short->int->long->float->double)
+--Explicit tip dönü?ümü: casting i?lemine tabi tutularak dönü?türme yap?l?r. Daha büyük veri türünü daha küçük veri türüne dönü?türmek için kullan?l?r.###NOT### Bu dönü?ümde veri kayb? ya?anabilir.
+Kullan?m? ?öyledir : int x; double y=9.99; x=(int)y; Böylece x'in de?eri 9 olacakt?r çünkü int tam say? tutuyor ve virgülden sonras? yokmu? gibi davran?yor.
+
+--> IF-ELSE IF-ELSE
+if içerisinde yaz?lan ko?ul sa?lanm?yorsa else if aç?p onun içine ko?ul yaz?p kontrol edebilir ya da direkt if içerisinde sa?lanmad??? durumda else blo?u aç?p orda i?lemlerimizi yapabiliriz.
+
+--> \t : ç?kt?da bir tab bo?luk b?rak?r.
+--> \n : ç?kt?da bir alt sat?ra k?r?l?m yapar.
+
+Boolean kullan?m? örne?i :
+isEven = ((number1 + number2)%2 == 0);
+System.out.println(isEven); // sayi1 ve sayi2 nin toplam? çift ise ekrana true yazd?racak tek ise false yazd?racak.
+
+##2.Hafta 1.Gün##
+--> Char ile matematiksel i?lem yap?p sonucu ekrana karakter olarak verebiliyoruz. Mesela alfabeyi yazd?rmak için char kullan?labilir.
+--> break; kullanarak ilgili bloktan ç?kabiliriz.
+--> while döngüsünün ko?ul k?sm?na true yazarak döngünün sonsuz dönmesinin sa?layabiliriz. Döngüden elde etti?imiz sonucu al?nca da break; ile döngüyü k?rabiliriz.
+
+
+##2.Hafta 3.Gün##
+--> Stringlerde == operatörü kullan?ld???nda kontrolü referans adresleri üzerinden sa?l?yor
+Yani String str1="harun"; String str2="harun"; yazd???m?zda bu iki string birbirine e?it oluyor. Çünkü string pool'da olan bir kelime bir kez daha tan?mland???nda o kelimeyi yeniden olu?turmuyor. Ama str1 ve str2'yi String s?n?f?ndan birer nesne olarak türetseydik her nesne içeri?inden ba??ms?z farkl? adreste oldu?u için de?erler e?it olmayacakt?.
+
+E?er biz stringlerin içeri?ini k?yaslamak istiyorsak direkt olarak equals methodunu kullanabiliriz.
+yani: str1.equals(str2) mi diye sorarsak "harun"=="harun" k?yaslamas?n? yap?p bize true dönecek.
+
+--> Switch-Case
+-- Switch case ile yap?labilien ço?u ?ey if else ile de yap?labiliyor, fakat switch case'in baz? avantajlar? var:
+If- else if- else kullan?m?nda ko?ula göre tüm bloklar? tek tek deniyor. Fakat switch case'de switch'de yazd???m?z ifadeye göre direkt olarak ilgili case'e gidiyor, di?erlerini denemiyor. Switch case, if-else'den daha h?zl? çal???yor.
+
+###NOT### -> case içerisinde yazd???m?z kodlar bittikten sonra mutlaka break; koymal?y?z ki o switch case'den ç?ks?n.
+Switch case içerisinde bir de default k?sm? bulunabilir (bulunmak zorunda de?ildir.). If else'deki else'e benzer. Hiçbir case'e uymuyorsa default çal???r.
+
+###NOT### -> switch içerisine condition yaz?lamaz. Sadece ifade yaz?labilir. Switch içerisine girilebilecek ifade türleri : byte, short, int, char, string
+
+Switch Case Kullan?m? (3 Çe?it kullan?m mevcuttur.)
+1-          switch (month) {
+  			case "Ocak":
+  				System.out.println("Aylardan Ocak");
+  				break;
+  			default:
+  				System.out.println("Aylardan Ocak de?il.");
+  				}
+2-      int month = 1;
+  		String ay = switch (month) {
+  			case 1 -> "Ocak";
+  			default -> "Yanl?? ay girdiniz.";
+2.Kullan?mda month içerisindeki de?ere uyan case'e gidip case'in içindeki de?eri ay isimli de?i?kene atad?.
+###NOT### -> Bu kullan?mda default zorunludur.
+3-
+        int n=1;
+		double sayi1=10;
+		double sayi2=20;
+		double result;
+		double sonuc=switch (n){
+			case 1->{
+				result=sayi1+sayi2;
+				yield result;
+			}
+			default -> throw new IllegalStateException("Unexpected value: " + n);
+Burada da 2. kullan?mdakine benzer bir kullan?m var fakat burada yield keywordu ile de?eri result de?i?kenine at?yoruz.
+
+##2.Hafta 4.Gün##
+--> BigDecimal ve kullan?m?: double ve float ile 4 i?lem yaparken sonuc her zaman do?ru ç?kmayabiliyor. Burada BigDecimal devreye giriyor. BigDecimal ondal?kl? say?lar ile çal???rken ihtiyaç duyulabilecek bir s?n?f. Kesin olarak do?ru sonucu döndürüyor. Hassas kodlar yazarken mutlaka kullan?lmas? gereken bir s?n?f.
+
+Tan?mlama: BigDecimal sayi=new BigDecimal("0.1") -> içerisinde 0.1 de?eri bulunan sayi ad?ndan bir nesne türettik.
+Toplama: BigDecimal sonuc=sayi.add(sayi); yani say?y? say?yla toplama i?lemi.
+Ç?karma: BigDecimal sonuc=sayi.subtract(sayi); yani say?dan say?y? ç?karma i?lemi.
+Çarpma: BigDecimal sonuc=sayi.multiply(sayi); yani say?y? say?yla çarpma i?lemi.
+Bölme: BigDecimal sonuc=sayi.divide(sayi); yani say?y? say?ya bölme i?lemi.
+
+--> Do while, while ile çok benzerdir. En büyük farkl?l?klar? do while'da ko?ul sa?lanmasa bile kodlar bir kez çal???r.
+###NOT### Do while kullan?m?nda while'dan sonra mutlaka ; konulmal?d?r.
+
+--> String Methodlar
+str1.charAt(2); --> 2.indexindeki karakteri gösterir. Index 0dan ba?lad??? için asl?nda 3.karakteri gösterecektir.
+str1.trim();--> Metnin ba??nda ve sonundaki whitespace'leri siler.
+str1.length();--> String'in uzunlu?unu verir.
+str1.IndexOf('a');--> a harfinin ilk görüldü?ü index'i verir.
+str1.lastIndexOf('a');--> a harfinin son görüldü?ü index'i verir.
+str1.substring(3);--> 3.index ve sonras?n? getirir ÖRNEK: Harun SAKIN için uygulad???m?zda un SAKIN yazar.
+str1.substring(6,10);-->6.indexten 10.indexe kadar olan k?sm? getirir.(10 dahil de?il) ÖRNEK: Harun SAKIN için SAKI yazar.
