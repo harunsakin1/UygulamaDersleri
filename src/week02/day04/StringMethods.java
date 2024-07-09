@@ -1,5 +1,7 @@
 package week02.day04;
 
+import java.util.Locale;
+
 public class StringMethods {
 	public static void main(String[] args) {
 		String value = " Merhaba Dunya ";
@@ -14,6 +16,11 @@ public class StringMethods {
 		System.out.println(value.equals(value2)); // string karsilastirma
 		System.out.println(value.trim()==value2); // yeni bir nesne olusturdugu icin false olur.
 		System.out.println(value.trim().equals(value2));// equals methodu ile ham degerine baktigimiz icin true olur.
-		
+		System.out.println(value.concat(value));// Concat birlestirme islemidir.
+		Locale englishLocale=new Locale("en","US"); // deprecated yani kaldirilmis
+		Locale englishLocale2=new Locale.Builder().setLanguage("en").setRegion("US").build(); // yeni kullanimi
+		String str1="i love istanbul";
+		System.out.println(str1.toUpperCase(englishLocale2));
+		System.out.println("Ad");
 	}
 }
