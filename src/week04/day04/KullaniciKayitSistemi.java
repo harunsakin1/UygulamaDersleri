@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class KullaniciKayitSistemi {
 	
 	static Scanner scanner = new Scanner(System.in);
-	static Kullanici[] kayitlar = new Kullanici[50];
 	
 	public static void main(String[] args) {
 //        Kullanici kullanici1= new Kullanici();
