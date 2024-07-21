@@ -16,7 +16,7 @@ public class Kullanici {
 	private LocalDate dogumTarihi;
 	
 	
-	public Kullanici(){
+	public Kullanici() {
 		this.kullaniciCount++;
 		this.id = kullaniciCount;
 		this.kayitTarihi = LocalDate.now();
@@ -100,17 +100,16 @@ public class Kullanici {
 	
 	@Override
 	public String toString() {
-		return "Kullanici{" +
-				"id=" + id +
-				", isim='" + isim + '\'' +
-				", soyisim='" + soyisim + '\'' +
-				", email='" + email + '\'' +
-				", telNo='" + telNo + '\'' +
-				", sifre='" + sifre + '\'' +
-				", kullaniciAdi='" + kullaniciAdi + '\'' +
-				", tcKimlik='" + tcKimlik + '\'' +
-				", kayitTarihi=" + kayitTarihi +
-				", dogumTarihi=" + dogumTarihi +
-				'}';
+		return "Kullanici{"
+				+ "id=" + id
+				+ ", isim='" + isim + '\''
+				+ ", soyisim='" + soyisim + '\''
+				+ ", email='" + email + '\''
+				+ ", telNo='" + telNo + '\''
+				+ ", sifre='" + sifre + '\''
+				+ ", kullaniciAdi='" + kullaniciAdi + '\''
+				+ ", tcKimlik='" + tcKimlik + '\''
+				+ ", kayitTarihi=" + kayitTarihi
+				+ ", dogumTarihi=" + dogumTarihi + '}';
 	}
 }

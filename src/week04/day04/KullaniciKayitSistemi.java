@@ -10,16 +10,6 @@ public class KullaniciKayitSistemi {
 	static Scanner scanner = new Scanner(System.in);
 	
 	public static void main(String[] args) {
-//        Kullanici kullanici1= new Kullanici();
-//        Kullanici kullanici2 = new Kullanici();
-//
-//        System.out.println("Id: " + kullanici1.getId() + " kullaniciCount : " + Kullanici.getKullaniciCount() + "
-//        kayitTarihi : " +kullanici1.getKayitTarihi());
-//        System.out.println("Id: " + kullanici2.getId() + " kullaniciCount : " + Kullanici.getKullaniciCount() + "
-//        kayitTarihi : " +kullanici2.getKayitTarihi());
-//
-//        System.out.print("Lutfen telno giriniz : +90 ");
-//        scanner.nextLine();
 		menu();
 	}
 	
@@ -60,7 +50,7 @@ public class KullaniciKayitSistemi {
 				KullaniciDB.girisYap(girisKullaniciAdi(), girisSifre());
 				break;
 			}
-			case 4:{
+			case 4: {
 				KullaniciDB.sifremiUnuttum(girisKullaniciAdi(), sifremiUnuttumMail(), sifremiUnuttumTC());
 				break;
 			}
@@ -94,24 +84,27 @@ public class KullaniciKayitSistemi {
 		return null;
 	}
 	
-	private static String girisKullaniciAdi(){
+	private static String girisKullaniciAdi() {
 		System.out.print("Kullanici adi : ");
-		String kullaniciAd=scanner.nextLine();
+		String kullaniciAd = scanner.nextLine();
 		return kullaniciAd;
 	}
-	private static String girisSifre(){
+	
+	private static String girisSifre() {
 		System.out.print("Sifre : ");
-		String sifre=scanner.nextLine();
+		String sifre = scanner.nextLine();
 		return sifre;
 	}
-	private static String sifremiUnuttumMail(){
+	
+	private static String sifremiUnuttumMail() {
 		System.out.print("Mail adresiniz : ");
-		String mail=scanner.nextLine();
+		String mail = scanner.nextLine();
 		return mail;
 	}
-	private static String sifremiUnuttumTC(){
+	
+	private static String sifremiUnuttumTC() {
 		System.out.print("TC kimlik numaraniz : ");
-		String tc=scanner.nextLine();
+		String tc = scanner.nextLine();
 		return tc;
 	}
 	
@@ -200,7 +193,7 @@ public class KullaniciKayitSistemi {
 		while (true) {
 			System.out.print("Lutfen telefon numaranizi giriniz : +90 ");
 			String telNo = scanner.nextLine();
-			if (telNo.length()!=10||telNo.startsWith("0")){
+			if (telNo.length() != 10 || telNo.startsWith("0")) {
 				System.out.println("Telefon numarasi 10 haneli olmalidir ve ilk hanesi 0'dan farkli olmalidir.");
 				continue;
 			}
@@ -217,7 +210,7 @@ public class KullaniciKayitSistemi {
 		while (true) {
 			System.out.print("Lutfen mailinizi giriniz : ");
 			email = scanner.nextLine();
-			if ((!email.contains("@"))||(!email.endsWith(".com"))){
+			if ((!email.contains("@")) || (!email.endsWith(".com"))) {
 				System.out.println("Lutfen gecerli bir mail adresi giriniz.");
 				continue;
 			}
