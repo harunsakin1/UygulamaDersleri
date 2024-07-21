@@ -8,7 +8,7 @@ package week03.day02;
 public class Question007 {
 	public static void main(String[] args) {
 		int toplam = 0;
-		int[] sayilar = {1, 13, 13, 13, 5, 13};
+		int[] sayilar = {1, 13, 13, 13, 5, 13,6};
 		for (int i = 0; i < sayilar.length - 1; i++) {
 			if (sayilar[i] == 13) {
 				if (sayilar[i + 1] != 13) {

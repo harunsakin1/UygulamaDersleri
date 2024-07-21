@@ -29,32 +29,19 @@ public class Question001 {
 			}
 			switch (secim) {
 				case 1: {
-					System.out.println("Birinci sayiyi giriniz : ");
-					int s1= sc.nextInt();
-					System.out.println("Ikinci sayiyi giriniz : ");
-					int s2= sc.nextInt();
-					int toplam=topla(s1,s2);
+					int toplam=topla(ikiSayiAl());
 					System.out.println(toplam);
 					break;
 				}
 				case 2: {
-					System.out.println("Birinci sayiyi giriniz : ");
-					int s1= sc.nextInt();
-					System.out.println("Ikinci sayiyi giriniz : ");
-					int s2= sc.nextInt();
-					int cikar=cikar(s1,s2);
+					int cikar=cikar(ikiSayiAl());
 					System.out.println(cikar);
 					break;
 				}
-				case 3: {
-					System.out.println("Birinci sayiyi giriniz : ");
-					int s1= sc.nextInt();
-					System.out.println("Ikinci sayiyi giriniz : ");
-					int s2= sc.nextInt();
-					int carpim=carp(s1,s2);
+				case 3: {;
+					int carpim=carp(ikiSayiAl());
 					System.out.println(carpim);
 					break;
-				
 				}
 				case 4: {
 					System.out.println("Birinci sayiyi giriniz : ");
@@ -77,16 +64,29 @@ public class Question001 {
 			}
 		}
 	}
-	public static int topla(int sayi1,int sayi2){
-		return sayi1+sayi2;
+	public static int topla(int[]sayilar){
+		int toplam=sayilar[0]+sayilar[1];
+		return toplam;
 	}
-	public static int cikar(int sayi1,int sayi2){
-		return sayi1-sayi2;
+	public static int cikar(int[]sayilar){
+		int toplam=sayilar[0]-sayilar[1];
+		return toplam;
 	}
-	public static int carp(int sayi1,int sayi2){
-		return sayi1*sayi2;
+	public static int carp(int[]sayilar){
+		int toplam=sayilar[0]*sayilar[1];
+		return toplam;
 	}
 	public static double bol(double sayi1,double sayi2){
 		return sayi1/sayi2;
 	}
+	public static int[] ikiSayiAl(){
+		int[] sayilar=new int[2];
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Birinci sayiyi giriniz :");
+		sayilar[0]=sc.nextInt();
+		System.out.println("Birinci sayiyi giriniz :");
+		sayilar[1]=sc.nextInt();
+		return sayilar;
+	}
+	
 }
