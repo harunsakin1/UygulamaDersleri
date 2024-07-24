@@ -1,34 +1,26 @@
-package week04.day04;
-
+package week04.kullanici_kayit_sistemi.refactored;
 
 import java.util.Arrays;
 
-public class KullaniciOzelListe {
-	
-	private Kullanici[] kullaniciDizisi;
+public class OzelListe<T> {
+	private T[] veriDizisi;
 	private int boyut;
-	
-	public Kullanici[] getKullaniciDizisi() {
-		return kullaniciDizisi;
+	OzelListe(){
+		veriDizisi=(T[]) new Object[0];
+	}
+	public T[] getVeriDizisi() {
+		return veriDizisi;
 	}
 	
-	public Kullanici add(Kullanici kullanici) {
-		Kullanici[] tmp;
-		if (kullaniciDizisi == null) {
-			kullaniciDizisi = new Kullanici[1];
-			kullaniciDizisi[0] = kullanici;
-			this.boyut = 1;
+	public T add(T t) {
+		T[] tmp = (T[])new Object[this.boyut + 1];
+		for (int i = 0; i < boyut; i++) {
+			tmp[i] = veriDizisi[i];
 		}
-		else {
-			tmp = new Kullanici[this.boyut + 1];
-			for (int i = 0; i < boyut; i++) {
-				tmp[i] = kullaniciDizisi[i];
-			}
-			tmp[this.boyut] = kullanici;
-			kullaniciDizisi = tmp;
-			this.boyut++;
-		}
-		return kullaniciDizisi[boyut - 1];
+		tmp[this.boyut] = t;
+		veriDizisi = tmp;
+		this.boyut++;
+		return veriDizisi[boyut - 1];
 	}
 	
 	
@@ -44,17 +36,16 @@ public class KullaniciOzelListe {
 		}
 		else {
 			try {
-				Kullanici[] tmp = new Kullanici[this.boyut - 1];
-//            int j = 0;
+				T[] tmp = (T[]) new Object[this.boyut - 1];
 				for (int i = 0; i < tmp.length; i++) {
 					if (i < index) {
-						tmp[i] = kullaniciDizisi[i];
+						tmp[i] = veriDizisi[i];
 					}
 					else {
-						tmp[i] = kullaniciDizisi[i + 1];
+						tmp[i] = veriDizisi[i + 1];
 					}
 				}
-				kullaniciDizisi = tmp;
+				veriDizisi = tmp;
 				boyut--;
 			}
 			catch (NegativeArraySizeException e) {
@@ -67,7 +58,7 @@ public class KullaniciOzelListe {
 	public void list() {
 		System.out.print("{");
 		for (int i = 0; i < boyut; i++) {
-			System.out.print(kullaniciDizisi[i]);
+			System.out.print(veriDizisi[i]);
 			if (i != boyut - 1) {
 				System.out.print(",");
 			}
@@ -75,10 +66,11 @@ public class KullaniciOzelListe {
 		System.out.println("}");
 	}
 	
-	public void addAll(Kullanici[] sayiDizisi) {
-		for (int i = 0; i < sayiDizisi.length; i++) {
-			add(sayiDizisi[i]);
+	public T[] addAll(T[] veriDizisi) {
+		for (int i = 0; i < veriDizisi.length; i++) {
+			add(veriDizisi[i]);
 		}
+		return veriDizisi;
 	}
 	
 	public void removeAllIndexes(int[] indexesToBeRemoved) {
@@ -86,5 +78,8 @@ public class KullaniciOzelListe {
 		for (int i = indexesToBeRemoved.length - 1; i >= 0; i--) {
 			remove(indexesToBeRemoved[i]);
 		}
+	}
+	public T replace(int index,T t){
+		return veriDizisi[index] = t;
 	}
 }

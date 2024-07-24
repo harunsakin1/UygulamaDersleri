@@ -1,0 +1,25 @@
+package week04.kullanici_kayit_sistemi.refactored;
+
+import java.time.LocalDate;
+
+public class Mail extends Message{
+	private static int mailCount = 0;
+	
+	private String baslik;
+	
+	public Mail(){
+		this.mailCount++;
+		this.id = mailCount;
+		this.gonderilmeTarihi = LocalDate.now();
+	}
+	
+	public String getBaslik() {
+		return baslik;
+	}
+	
+	public void setBaslik(String baslik) {
+		this.baslik = baslik;
+	}
+	
+	
+}
