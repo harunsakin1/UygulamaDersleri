@@ -6,5 +6,4 @@ public enum EKategori {
 	BAKIM,
 	YIYECEK,
 	AKSESUAR;
-	
 }
