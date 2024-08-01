@@ -1,6 +1,9 @@
-package uygulamalar.grupProjeDay01;
+package uygulamalar.grupProje_1.entities;
 
-public class ElektronikUrunleri extends Urun{
+import uygulamalar.grupProje_1.utilities.enums.ECihazTipi;
+import uygulamalar.grupProje_1.utilities.enums.EKategori;
+
+public class ElektronikUrunleri extends Urun {
 	
 	private Integer pilOmru;
 	private Double calismaVoltaji;

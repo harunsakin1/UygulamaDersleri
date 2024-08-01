@@ -1,4 +1,9 @@
-package uygulamalar.grupProjeDay01;
+package uygulamalar.grupProje_1.entities;
+
+import uygulamalar.grupProje_1.utilities.enums.EDesen;
+import uygulamalar.grupProje_1.utilities.enums.EKategori;
+import uygulamalar.grupProje_1.utilities.enums.EMateryal;
+import uygulamalar.grupProje_1.utilities.enums.ETur;
 
 public class AksesuarUrunleri extends Urun {
 	private ETur tur;

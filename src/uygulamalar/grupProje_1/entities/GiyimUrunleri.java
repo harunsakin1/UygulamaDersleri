@@ -1,6 +1,10 @@
-package uygulamalar.grupProjeDay01;
+package uygulamalar.grupProje_1.entities;
 
-public class GiyimUrunleri extends Urun{
+import uygulamalar.grupProje_1.utilities.enums.EBeden;
+import uygulamalar.grupProje_1.utilities.enums.EKategori;
+import uygulamalar.grupProje_1.utilities.enums.ERenk;
+
+public class GiyimUrunleri extends Urun {
 	private EBeden beden;
 	private ERenk renk;
 	

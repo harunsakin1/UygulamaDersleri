@@ -1,4 +1,4 @@
-package uygulamalar.grupProjeDay01;
+package uygulamalar.grupProje_1.utilities.enums;
 
 public enum EBeden {
 	XS,

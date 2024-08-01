@@ -1,4 +1,7 @@
-package uygulamalar.grupProjeDay01;
+package uygulamalar.grupProje_1;
+
+import uygulamalar.grupProje_1.entities.Urun;
+import uygulamalar.grupProje_1.kullaniciIslemleri.entities.Kullanici;
 
 import java.util.ArrayList;
 
@@ -6,6 +9,7 @@ import java.util.ArrayList;
 public class Sepet {
 	private static Integer sepetIdCount=0;
 	private Integer sepetId;
+	private Kullanici kullanici;
 	ArrayList<Urun> sepetList;
 	ArrayList<Urun>uniqueUrunler;
 	ArrayList<Integer>adet;
@@ -37,6 +41,13 @@ public class Sepet {
 		sepetList.add(urun);
 		return sepetList;
 	}
+	public void sepetiOnayla(){
+		for (Urun urun:sepetList){
+			urun.setAdet(urun.getAdet() -1);
+		}
+		sepetList.clear();
+		System.out.println("Sepet onaylandi. Satin alim gerceklesti.");
+	}
 	
 	public ArrayList<Urun> sepettekiUrunleriListele() {
 		uniqueUrunler.clear();
@@ -58,7 +69,7 @@ public class Sepet {
 			int urunlerAdet = adet.get(i);
 			double fiyat = urun.getFiyat();
 			System.out.println("Urun ID'si : "+urun.getUrunId()+"\t|\t"+" Urun Adi : " + urun.getAd()+"\t|\t" + " " +
-					                   "Urun Adedi : " +  urunlerAdet +"\t|\t"+ "Urun Fiyati : " + (fiyat * urunlerAdet));
+					                   "Urun Adedi : " +  urunlerAdet +"\t|\t"+ "Urun Birim Fiyat : " + fiyat );
 			toplam += urun.getFiyat() * urunlerAdet;
 		}
 		System.out.println(" Toplam fiyat : " + toplam);

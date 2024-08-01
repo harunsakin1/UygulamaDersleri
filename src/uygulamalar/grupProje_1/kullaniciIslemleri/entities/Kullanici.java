@@ -1,11 +1,11 @@
-package uygulamalar.kullanici_kayit_sistemi.refactored.entities;
+package uygulamalar.grupProje_1.kullaniciIslemleri.entities;
 
 import uygulamalar.grupProje_1.Sepet;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Kullanici extends BaseEntity{
+public class Kullanici extends BaseEntity {
 	private static int kullaniciCount = 0;
 	private String isim;
 	private String soyisim;

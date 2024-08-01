@@ -1,6 +1,9 @@
-package uygulamalar.grupProjeDay01;
+package uygulamalar.grupProje_1.entities;
 
-public class BakimUrunleri extends Urun{
+import uygulamalar.grupProje_1.utilities.enums.EBakimUrunleriTipler;
+import uygulamalar.grupProje_1.utilities.enums.EKategori;
+
+public class BakimUrunleri extends Urun {
 	private EBakimUrunleriTipler tipler;
 	
 	public BakimUrunleri(String ad, Double fiyat, String aciklama, EKategori kategori, Integer adet, EBakimUrunleriTipler tipler ) {

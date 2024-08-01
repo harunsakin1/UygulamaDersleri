@@ -1,6 +1,9 @@
-package uygulamalar.grupProjeDay01;
+package uygulamalar.grupProje_1.entities;
 
-public class Yiyecek extends Urun{
+import uygulamalar.grupProje_1.utilities.enums.EKategori;
+import uygulamalar.grupProje_1.utilities.enums.EYiyecekTipi;
+
+public class Yiyecek extends Urun {
 	private EYiyecekTipi yiyecekTipi;
 	
 	public Yiyecek(String ad, Double fiyat, String aciklama, EKategori kategori, Integer adet, EYiyecekTipi yiyecekTipi) {

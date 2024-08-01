@@ -1,4 +1,6 @@
-package uygulamalar.grupProjeDay01;
+package uygulamalar.grupProje_1;
+
+import uygulamalar.grupProje_1.entities.Urun;
 
 public class UrunDB {
 	
