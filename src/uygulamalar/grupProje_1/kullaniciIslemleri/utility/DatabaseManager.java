@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseManager<T extends BaseEntity> implements ICRUD<T> {
-	protected ArrayList<T> veriListesi = new ArrayList<>();
+	public ArrayList<T> veriListesi = new ArrayList<>();
 	
 	@Override
 	public T save(T t) {

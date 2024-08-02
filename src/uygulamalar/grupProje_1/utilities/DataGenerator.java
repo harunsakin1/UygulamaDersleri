@@ -34,4 +34,5 @@ public class DataGenerator {
 		AksesuarUrunleri aksesuar5 = new AksesuarUrunleri("Kupe", 120d, "Altindan yapilmis basit bir kupe. Gunluk kullanim icin ideal.", EKategori.AKSESUAR, 6, ETur.KUPE, EMateryal.ALTIN, EDesen.DUZ);
 		
 	}
-}
+		
+	}
