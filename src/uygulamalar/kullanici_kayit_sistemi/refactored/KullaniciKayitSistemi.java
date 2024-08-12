@@ -25,25 +25,25 @@ public class KullaniciKayitSistemi {
     }
 
     public static void menu() {
-        int secim = -1;
-        do {
-                System.out.println("### KULLANICI KAYIT SISTEMI ###");
-                System.out.println("1- Kayit Ol");
-                System.out.println("2- Giris Yap");
-                System.out.println("3- Sifremi Unuttum");
-                System.out.println("8- Demo veri olustur");
-                System.out.println("9- Kullanicilari Goruntule");
-                System.out.println("0- Cikis");
-                System.out.print("Lutfen bir secim yapiniz : ");
-                try {
-                    secim = scanner.nextInt();
-                } catch (Exception e){
-                    System.out.println("Gecerli bir secim yapiniz.");
-                } finally {
-                    scanner.nextLine();
-                }
-                menuFunctions(secim);
-        } while (secim != 0);
+	        int secim = -1;
+	        do {
+	                System.out.println("### KULLANICI KAYIT SISTEMI ###");
+	                System.out.println("1- Kayit Ol");
+	                System.out.println("2- Giris Yap");
+	                System.out.println("3- Sifremi Unuttum");
+	                System.out.println("8- Demo veri olustur");
+	                System.out.println("9- Kullanicilari Goruntule");
+	                System.out.println("0- Cikis");
+	                System.out.print("Lutfen bir secim yapiniz : ");
+	                try {
+	                    secim = scanner.nextInt();
+	                } catch (Exception e){
+	                    System.out.println("Gecerli bir secim yapiniz.");
+	                } finally {
+	                    scanner.nextLine();
+	                }
+	                menuFunctions(secim);
+	        } while (secim != 0);
     }
 
     private static void menuFunctions(int secim) {
@@ -425,7 +425,7 @@ public class KullaniciKayitSistemi {
         }
     }
 
-    private static Kullanici kullaniciKaydi() {
+    private static Kullanici    kullaniciKaydi() {
         LocalDate dogumTarihi;
         Kullanici kullanici;
         dogumTarihi = dogumTarihiAl();
